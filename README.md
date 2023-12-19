@@ -1,2 +1,2 @@
 # An Introduction to Palindromes
- same back to front
+ they're the same back to front

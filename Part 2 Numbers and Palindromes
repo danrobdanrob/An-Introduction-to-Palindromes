@@ -1,0 +1,32 @@
+def palindromicnumbers(stringbetween):
+    for i in stringbetween:
+        if i == i[::-1]:
+            newlist.append(i)
+    return newlist
+
+print("Please enter your start number")
+
+start = int(input())
+
+print("Please enter your end number")
+
+end = int(input())
+
+between = list(range((start+1),end))
+stringbetween = [str(x) for x in between]
+newlist = []
+answer = palindromicnumbers(stringbetween)
+
+print("The " + str(len(answer)) + " palindromes between " + str(start) + " and " + str(end) + " are: " + (",".join(answer)))
+
+#user inputs a start number and a higher end number
+#numbers between start and end are made into a list which contains all the numbers between them
+#convert the integers in the list into strings
+#check if each of those numbers is palindromic (they are the same sliced forwards and backwards)
+#each time a number within the list is palindromic add it to a new list
+#return the list
+#print output in plain text form.
+
+#notes: 
+#initially tried to remove non palindromes from the list but found i was changing the index of the list as i iterated through it so instead changed to new list
+#between and stringbetween could be on the same line
